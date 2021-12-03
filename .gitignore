@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # IntelliJ files
-.idea
+.idea/
 *.iml
 target
-/out
+out

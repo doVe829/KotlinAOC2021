@@ -1,4 +1,4 @@
-package helper
+package AoC2021.helper
 
 import java.io.File
 

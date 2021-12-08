@@ -1,7 +1,7 @@
-package AoC2021.day4
+package aoc2021.day4
 
-import AoC2021.helper.fileToList
-val input = fileToList("src/2021/Day04_input.txt")
+import aoc2021.helper.fileToList
+val input = fileToList("src/aoc2021/Day04_input.txt")
 
 fun main(){
     println(part1())

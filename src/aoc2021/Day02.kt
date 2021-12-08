@@ -1,7 +1,7 @@
-package AoC2021.day2
-import AoC2021.helper.fileToList
+package aoc2021.day2
+import aoc2021.helper.fileToList
 
-val input = fileToList("src/2021/Day02_input.txt")
+val input = fileToList("src/aoc2021/Day02_input.txt")
 /* down X increases your aim by X units.
 up X decreases your aim by X units.
 forward X does two things:

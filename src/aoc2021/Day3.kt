@@ -1,8 +1,8 @@
-package AoC2021.day3
+package aoc2021.day3
 
-import AoC2021.helper.fileToList
+import aoc2021.helper.fileToList
 
-val input = fileToList("src/2021/Day03_input.txt")
+val input = fileToList("src/aoc2021/Day03_input.txt")
 val bitIndices = input[0].indices
 
 fun convertBinaryToDecimal(num: Long): Int {

@@ -2,17 +2,17 @@ package aoc2021
 
 import aoc2021.helper.fileToList
 
-fun main(){
+fun main() {
     var input = fileToList("src/aoc2021/Day06_input.txt")
 
     fun partOne(days: Int): Int {
         var startingFishes = input.single().split(",").map { it.toInt() }
-        repeat(days){
+        repeat(days) {
             val newFishes = ArrayList<Int>()
             startingFishes.forEach { fish ->
-                if(fish > 0){
+                if (fish > 0) {
                     newFishes.add(fish - 1)
-                }else if( fish == 0){
+                } else if (fish == 0) {
                     newFishes.add(6)
                     newFishes.add(8)
                 }

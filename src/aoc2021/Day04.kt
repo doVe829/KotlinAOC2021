@@ -1,23 +1,24 @@
 package aoc2021.day4
 
 import aoc2021.helper.fileToList
+
 val input = fileToList("src/aoc2021/Day04_input.txt")
 
-fun main(){
+fun main() {
     println(part1())
     println(part2())
 
 }
 
-fun part1(): Int{
+fun part1(): Int {
     val (inputs, boards) = createBoardAndInputs(input)
-    return playBingo(numbers = inputs, boards = boards )
+    return playBingo(numbers = inputs, boards = boards)
 
 }
 
-fun part2(): Int{
+fun part2(): Int {
     val (inputs, boards) = createBoardAndInputs(input)
-    return playBingo(numbers = inputs, boards = boards, firstFound = false )
+    return playBingo(numbers = inputs, boards = boards, firstFound = false)
 }
 
 fun playBingo(
@@ -54,7 +55,7 @@ fun playBingo(
     return 0
 }
 
-fun createBoardAndInputs(input:List<String>): Pair<List<Int>, List<List<MutableList<Int>>>> {
+fun createBoardAndInputs(input: List<String>): Pair<List<Int>, List<List<MutableList<Int>>>> {
     val gameInputs = input.first().split(",").map { it.toInt() }
 
     val gameLines = input.drop(1).filter { it.isNotEmpty() }

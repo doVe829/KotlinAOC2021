@@ -20,10 +20,10 @@ fun convertBinaryToDecimal(num: Long): Int {
     return decimalNumber
 }
 
-fun findBit(position: Int) : String{
-    var bit:String
+fun findBit(position: Int): String {
+    var bit: String
     val list = arrayListOf<Char>()
-    input.forEach{ inp ->
+    input.forEach { inp ->
         list.add(inp[position])
     }
     val listSums = list.groupingBy { it }.eachCount()
@@ -43,6 +43,7 @@ fun List<String>.countBits(index: Int): Pair<Int, Int> {
     }
     return zeros to ones
 }
+
 fun part2(input: List<String>): Int {
     // length of string
     val length = input.first().length
@@ -69,13 +70,13 @@ fun part2(input: List<String>): Int {
 }
 
 
-fun main(){
+fun main() {
     println(part2(input))
 
     // PART ONE //
     var gammaRate = ""
 
-    for (bit in bitIndices){
+    for (bit in bitIndices) {
         gammaRate += findBit(bit)
     }
     var gammaRateDecimal = convertBinaryToDecimal(gammaRate.toLong())

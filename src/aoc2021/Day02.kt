@@ -1,4 +1,5 @@
 package aoc2021.day2
+
 import aoc2021.helper.fileToList
 
 val input = fileToList("src/aoc2021/Day02_input.txt")
@@ -8,7 +9,7 @@ forward X does two things:
 It increases your horizontal position by X units.
 It increases your depth by your aim multiplied by X. */
 
-fun partTwo(){
+fun partTwo() {
     var xPosition = 0
     var yPosition = 0
     var aim = 0
@@ -16,16 +17,16 @@ fun partTwo(){
         var splitted = element.split(" ")
         var key = splitted[0]
         var value = splitted[1].toInt()
-        if(key == "forward"){
+        if (key == "forward") {
             xPosition += value
             yPosition += aim * value
         }
 
-        if (key == "down"){
+        if (key == "down") {
             aim += value
         }
 
-        if (key == "up"){
+        if (key == "up") {
             aim -= value
         }
     }
@@ -34,7 +35,7 @@ fun partTwo(){
     println(xPosition * yPosition);
 }
 
-fun partOne(){
+fun partOne() {
     var xPosition = 0
     var yPosition = 0
 
@@ -42,15 +43,15 @@ fun partOne(){
         var splitted = element.split(" ")
         var key = splitted[0]
         var value = splitted[1].toInt()
-        if(key == "forward"){
+        if (key == "forward") {
             xPosition += value
         }
 
-        if (key == "down"){
+        if (key == "down") {
             yPosition += value
         }
 
-        if (key == "up"){
+        if (key == "up") {
             yPosition -= value
         }
     }
@@ -59,7 +60,7 @@ fun partOne(){
     println(xPosition * yPosition);
 }
 
-fun main(){
+fun main() {
     partOne()
     partTwo()
 }

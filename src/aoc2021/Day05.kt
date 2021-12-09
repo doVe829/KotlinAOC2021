@@ -59,6 +59,7 @@ fun getDiagonalPoints(startX: Int, startY: Int, endX: Int, endY: Int): List<Pair
     points.add(Pair(x, y))
     return points
 }
+
 fun readLines(): List<Line> {
     val values = fileToList("src/aoc2021/Day05_input.txt")
 
@@ -100,7 +101,7 @@ fun part2() {
 }
 
 
-fun main(){
+fun main() {
     part1()
     part2()
 
